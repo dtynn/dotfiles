@@ -25,3 +25,6 @@
 [submodule ".vim/pack/plugins/start/tlib"]
 	path = .vim/pack/plugins/start/tlib
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vim/pack/plugins/start/delimitMate"]
+	path = .vim/pack/plugins/start/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git

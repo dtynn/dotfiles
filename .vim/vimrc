@@ -47,7 +47,7 @@ silent! helptags ALL
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nnoremap gtt :NERDTreeToggle<CR>
-nnoremap gtf :NERDTreeFocus<CR>
+nnoremap nt :NERDTreeToggle<CR>
+nnoremap nf :NERDTreeFocus<CR>
 
 au FileType rust nnoremap gd :ALEGoToDefinitionInTab<CR>
