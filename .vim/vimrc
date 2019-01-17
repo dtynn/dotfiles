@@ -2,11 +2,15 @@ set nocompatible
 set number
 
 filetype plugin indent on
-syntax on 
+syntax on
 
 set autoindent             " Indent according to previous line.
-set expandtab 
+set expandtab
 set autoread
+set nowrap
+set smarttab
+set tabstop=4
+set shiftwidth=4
 
 set backspace=indent,eol,start
 set hidden
@@ -23,9 +27,14 @@ set incsearch
 let g:rustfmt_autosave = 1
 
 let g:ale_linters = {'rust': ['rls']}
+let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_completion_enabled = 1
 let g:ale_completion_max_suggestions = 10
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+let g:ale_fix_on_save = 1
 
 set wildignore+=*/target/*
 let g:ctrlp_prompt_mappings = {
