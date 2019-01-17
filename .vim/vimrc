@@ -1,0 +1,44 @@
+set nocompatible
+set number
+
+filetype plugin indent on
+syntax on 
+
+set autoindent             " Indent according to previous line.
+set expandtab 
+set autoread
+
+set backspace=indent,eol,start
+set hidden
+set laststatus  =2
+set display     =lastline
+
+set showmode
+set showcmd
+
+set lazyredraw
+
+set incsearch
+
+let g:rustfmt_autosave = 1
+
+let g:ale_linters = {'rust': ['rls']}
+let g:ale_completion_enabled = 1
+let g:ale_completion_max_suggestions = 10
+let g:ale_lint_on_text_changed = 'never'
+
+set wildignore+=*/target/*
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
+packloadall
+silent! helptags ALL
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nnoremap gtt :NERDTreeToggle<CR>
+nnoremap gtf :NERDTreeFocus<CR>
+
+au FileType rust nnoremap gd :ALEGoToDefinitionInTab<CR>
