@@ -12,6 +12,9 @@ set smarttab
 set tabstop=4
 set shiftwidth=4
 
+set splitbelow
+set splitright
+
 set backspace=indent,eol,start
 set hidden
 set laststatus  =2
@@ -24,7 +27,7 @@ set lazyredraw
 
 set incsearch
 
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 0
 
 let g:ale_linters = {'rust': ['rls']}
 let g:ale_rust_rls_toolchain = 'stable'
@@ -33,6 +36,7 @@ let g:ale_completion_max_suggestions = 10
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'rust': ['rustfmt'],
 \}
 let g:ale_fix_on_save = 1
 
@@ -50,4 +54,5 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap nf :NERDTreeFocus<CR>
 
-au FileType rust nnoremap gd :ALEGoToDefinitionInTab<CR>
+au FileType rust nnoremap gd :ALEGoToDefinitionInVSplit<CR>
+au FileType rust nnoremap gh :ALEHover<CR>
