@@ -25,3 +25,6 @@
 [submodule ".vim/pack/plugins/start/completor.vim"]
 	path = .vim/pack/plugins/start/completor.vim
 	url = https://github.com/maralla/completor.vim.git
+[submodule ".vim/pack/plugins/start/ultisnips"]
+	path = .vim/pack/plugins/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
