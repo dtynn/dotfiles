@@ -28,3 +28,9 @@
 [submodule ".vim/pack/plugins/start/delimitMate"]
 	path = .vim/pack/plugins/start/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule ".vim/pack/plugins/start/vim-racer"]
+	path = .vim/pack/plugins/start/vim-racer
+	url = https://github.com/racer-rust/vim-racer.git
+[submodule ".vim/pack/plugins/start/completor.vim"]
+	path = .vim/pack/plugins/start/completor.vim
+	url = https://github.com/maralla/completor.vim.git

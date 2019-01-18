@@ -32,12 +32,12 @@ set lazyredraw
 
 " set incsearch
 
+
 let g:rustfmt_autosave = 0
+let g:completor_racer_binary = 'racer'
 
 let g:ale_linters = {'rust': ['rls']}
 let g:ale_rust_rls_toolchain = 'stable'
-let g:ale_completion_enabled = 1
-let g:ale_completion_max_suggestions = 10
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -57,6 +57,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+
 packloadall
 silent! helptags ALL
 
@@ -66,7 +67,7 @@ nnoremap nt :NERDTreeToggle<CR>
 nnoremap nf :NERDTreeFocus<CR>
 
 
-au FileType rust nnoremap gd :ALEGoToDefinitionInVSplit<CR>
+au FileType rust nmap gd <Plug>(rust-def-vertical)
 au FileType rust nnoremap gh :ALEHover<CR>
 
 au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
