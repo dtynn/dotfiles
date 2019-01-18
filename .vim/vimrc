@@ -56,3 +56,5 @@ nnoremap nf :NERDTreeFocus<CR>
 
 au FileType rust nnoremap gd :ALEGoToDefinitionInVSplit<CR>
 au FileType rust nnoremap gh :ALEHover<CR>
+
+au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
