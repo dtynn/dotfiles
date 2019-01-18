@@ -7,10 +7,15 @@ syntax on
 set autoindent             " Indent according to previous line.
 set expandtab
 set autoread
+set noswapfile
 set nowrap
 set smarttab
 set tabstop=4
 set shiftwidth=4
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+
+set completeopt=menu,menuone,preview,noselect,noinsert
 
 set splitbelow
 set splitright
@@ -25,7 +30,7 @@ set showcmd
 
 set lazyredraw
 
-set incsearch
+" set incsearch
 
 let g:rustfmt_autosave = 0
 
@@ -39,6 +44,12 @@ let g:ale_fixers = {
 \   'rust': ['rustfmt'],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_close_preview_on_insert = 1
+
+let g:nerdtree_tabs_open_on_console_startup=1
+
+let g:snipMate = {}
+let g:snipMate.no_default_aliases = 1
 
 set wildignore+=*/target/*
 let g:ctrlp_prompt_mappings = {
@@ -53,6 +64,7 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap nf :NERDTreeFocus<CR>
+
 
 au FileType rust nnoremap gd :ALEGoToDefinitionInVSplit<CR>
 au FileType rust nnoremap gh :ALEHover<CR>
