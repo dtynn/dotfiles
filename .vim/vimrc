@@ -4,7 +4,7 @@ set number
 filetype plugin indent on
 syntax on
 
-colorscheme codedark
+colorscheme dark_plus
 
 set autoindent             " Indent according to previous line.
 set expandtab
