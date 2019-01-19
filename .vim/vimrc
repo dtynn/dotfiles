@@ -38,9 +38,10 @@ set lazyredraw
 let g:rustfmt_autosave = 0
 let g:completor_racer_binary = 'racer'
 
-let g:ale_linters = {'rust': ['rls']}
 let g:ale_rust_rls_toolchain = 'stable'
+let g:ale_linters = {'rust': ['rls']}
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
@@ -60,10 +61,9 @@ let g:ctrlp_prompt_mappings = {
 packloadall
 silent! helptags ALL
 
-nnoremap <silent> gvt :vert term<CR>
+nnoremap <silent> gw :update<CR>
 
-inoremap <silent> <C-s> <esc>:w<CR>
-nnoremap <silent> <C-s> :w<CR>
+nnoremap <silent> gvt :vert term<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -74,5 +74,3 @@ nnoremap tf :NERDTreeFocus<CR>
 au FileType rust nmap gd <Plug>(rust-def-vertical)
 au FileType rust nnoremap gh :ALEHover<CR>
 au FileType rust nnoremap ga :ALEDetail<CR>
-
-au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
