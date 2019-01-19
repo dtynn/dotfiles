@@ -60,6 +60,11 @@ let g:ctrlp_prompt_mappings = {
 packloadall
 silent! helptags ALL
 
+nnoremap <silent> vt :vert term<CR>
+
+inoremap <silent> <C-s> <esc>:w<CR>
+nnoremap <silent> <C-s> :w<CR>
+
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap tt :NERDTreeToggle<CR>
