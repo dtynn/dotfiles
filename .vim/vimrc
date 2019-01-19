@@ -60,7 +60,7 @@ let g:ctrlp_prompt_mappings = {
 packloadall
 silent! helptags ALL
 
-nnoremap <silent> vt :vert term<CR>
+nnoremap <silent> gvt :vert term<CR>
 
 inoremap <silent> <C-s> <esc>:w<CR>
 nnoremap <silent> <C-s> :w<CR>
@@ -73,5 +73,6 @@ nnoremap tf :NERDTreeFocus<CR>
 
 au FileType rust nmap gd <Plug>(rust-def-vertical)
 au FileType rust nnoremap gh :ALEHover<CR>
+au FileType rust nnoremap gaa :ALEDetail<CR>
 
 au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
