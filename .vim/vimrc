@@ -4,6 +4,8 @@ set number
 filetype plugin indent on
 syntax on
 
+colorscheme codedark
+
 set autoindent             " Indent according to previous line.
 set expandtab
 set autoread
@@ -60,8 +62,8 @@ silent! helptags ALL
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nnoremap nt :NERDTreeToggle<CR>
-nnoremap nf :NERDTreeFocus<CR>
+nnoremap tt :NERDTreeToggle<CR>
+nnoremap tf :NERDTreeFocus<CR>
 
 
 au FileType rust nmap gd <Plug>(rust-def-vertical)
