@@ -28,3 +28,6 @@
 [submodule ".vim/pack/plugins/start/ultisnips"]
 	path = .vim/pack/plugins/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule ".vim/pack/plugins/start/vim-code-dark-plus"]
+	path = .vim/pack/plugins/start/vim-code-dark-plus
+	url = https://github.com/dunstontc/vim-vscode-theme.git
