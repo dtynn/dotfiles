@@ -73,6 +73,6 @@ nnoremap tf :NERDTreeFocus<CR>
 
 au FileType rust nmap gd <Plug>(rust-def-vertical)
 au FileType rust nnoremap gh :ALEHover<CR>
-au FileType rust nnoremap gaa :ALEDetail<CR>
+au FileType rust nnoremap ga :ALEDetail<CR>
 
 au FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
