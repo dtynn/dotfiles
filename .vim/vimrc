@@ -16,24 +16,18 @@ set shiftwidth=4
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 set cursorline
-
 set completeopt=menu,menuone,preview,noselect,noinsert
-
 set splitbelow
 set splitright
-
 set backspace=indent,eol,start
 set hidden
 set laststatus  =2
 set display     =lastline
-
 set showmode
 set showcmd
-
 set lazyredraw
 
 " set incsearch
-
 
 let g:rustfmt_autosave = 0
 let g:completor_racer_binary = 'racer'
@@ -63,7 +57,8 @@ let g:ctrlp_prompt_mappings = {
 packloadall
 silent! helptags ALL
 
-nnoremap <silent> gw :update<CR>
+inoremap <silent> jj <ESC>
+nnoremap <silent> kk :update<CR>
 
 nnoremap <silent> gvt :vert term<CR>
 
