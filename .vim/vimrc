@@ -7,7 +7,6 @@ syntax on
 colorscheme dark_plus
 
 set autoindent             " Indent according to previous line.
-set expandtab
 set autoread
 set noswapfile
 set nowrap
@@ -16,6 +15,7 @@ set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
+set cursorline
 
 set completeopt=menu,menuone,preview,noselect,noinsert
 
