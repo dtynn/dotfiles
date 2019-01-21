@@ -45,9 +45,9 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
 
-let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup = 1
 let NERDTreeHighlightCursorline = 1
-let NERDTreeShowLineNumbers=1
+let NERDTreeShowLineNumbers = 1
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -58,6 +58,7 @@ let g:ctrlp_prompt_mappings = {
     \ }
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ack_autoclose = 1
 
 
 packloadall
@@ -68,7 +69,7 @@ nnoremap <silent> ;; :update<CR>
 
 nnoremap <silent> gvt :vert term<CR>
 nnoremap <silent> gc :let @/ = ""<CR>
-nnoremap gs :Ack<SPACE>
+nnoremap gs :Ack!<SPACE>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
