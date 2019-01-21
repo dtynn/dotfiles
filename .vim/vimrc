@@ -58,7 +58,7 @@ packloadall
 silent! helptags ALL
 
 inoremap <silent> jj <ESC>
-nnoremap <silent> kk :update<CR>
+nnoremap <silent> ;; :update<CR>
 
 nnoremap <silent> gvt :vert term<CR>
 
