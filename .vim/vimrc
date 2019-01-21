@@ -70,6 +70,7 @@ nnoremap <silent> ;; :update<CR>
 nnoremap <silent> gvt :vert term<CR>
 nnoremap <silent> gc :let @/ = ""<CR>
 nnoremap gs :Ack!<SPACE>
+nnoremap gq :cclose<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
