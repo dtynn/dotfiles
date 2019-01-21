@@ -26,6 +26,7 @@ set display     =lastline
 set showmode
 set showcmd
 set lazyredraw
+set scrolloff=5
 
 " set incsearch
 
