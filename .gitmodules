@@ -37,3 +37,6 @@
 [submodule ".vim/pack/plugins/start/indentLine"]
 	path = .vim/pack/plugins/start/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule ".vim/pack/plugins/start/nerdtree-git-plugin"]
+	path = .vim/pack/plugins/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git

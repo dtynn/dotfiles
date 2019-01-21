@@ -36,7 +36,7 @@ let g:completor_racer_binary = 'racer'
 let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_linters = {'rust': ['rls']}
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
@@ -69,6 +69,7 @@ nnoremap tt :NERDTreeToggle<CR>
 nnoremap tf :NERDTreeFocus<CR>
 
 
-au FileType rust nmap gd <Plug>(rust-def-vertical)
+au FileType rust nmap gdd :ALEGoToDefinitionInVSplit<CR>
+au FileType rust nmap gdr <Plug>(rust-def-vertical)
 au FileType rust nnoremap gh :ALEHover<CR>
 au FileType rust nnoremap ga :ALEDetail<CR>
