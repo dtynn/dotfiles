@@ -57,6 +57,8 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 
 packloadall
 silent! helptags ALL
@@ -65,7 +67,7 @@ inoremap <silent> jj <ESC>
 nnoremap <silent> ;; :update<CR>
 
 nnoremap <silent> gvt :vert term<CR>
-nnoremap <silent> gs :let @/ = ""<CR>
+nnoremap <silent> gc :let @/ = ""<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
