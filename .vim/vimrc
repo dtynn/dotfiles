@@ -28,6 +28,7 @@ set showcmd
 set lazyredraw
 set scrolloff=5
 set hlsearch
+set clipboard=unnamed
 
 " set incsearch
 
