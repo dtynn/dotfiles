@@ -16,6 +16,7 @@ set shiftwidth=4
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 set cursorline
+set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,menuone,preview,noselect,noinsert
 set splitbelow
 set splitright
@@ -46,6 +47,8 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
 
+" let g:UltiSnipsExpandTrigger="<C-e>"
+
 let g:nerdtree_tabs_open_on_console_startup = 1
 let NERDTreeHighlightCursorline = 1
 let NERDTreeShowLineNumbers = 1
@@ -61,11 +64,19 @@ let g:ctrlp_prompt_mappings = {
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ack_autoclose = 1
 
+" let g:ycm_min_num_of_chars_for_completion = 2
+" let g:ycm_min_num_identifier_candidate_chars = 2
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_key_list_stop_completion = ['<enter>']
+" let g:ycm_filetype_whitelist = {'rust': 1}
+" let g:ycm_racerd_binary_path = 'racerd'
+" let g:complete_parameter_use_ultisnips_mapping = 1
 
 packloadall
 silent! helptags ALL
 
 inoremap <silent> jj <ESC>
+inoremap <silent> ;; <ESC>A;
 nnoremap <silent> ;; :update<CR>
 
 nnoremap <silent> gvt :vert term<CR>
@@ -77,6 +88,8 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap tt :NERDTreeToggle<CR>
 nnoremap tf :NERDTreeFocus<CR>
+
+" inoremap <silent><expr> ( complete_parameter#pre_complete("()")
 
 
 au FileType rust nmap gdd :ALEGoToDefinitionInVSplit<CR>
