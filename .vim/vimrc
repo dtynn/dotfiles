@@ -34,7 +34,6 @@ set clipboard=unnamed
 " set incsearch
 
 let g:rustfmt_autosave = 0
-let g:completor_racer_binary = 'racer'
 
 let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_linters = {'rust': ['rls']}
@@ -46,8 +45,6 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
-
-" let g:UltiSnipsExpandTrigger="<C-e>"
 
 let g:nerdtree_tabs_open_on_console_startup = 1
 let NERDTreeHighlightCursorline = 1
@@ -64,13 +61,30 @@ let g:ctrlp_prompt_mappings = {
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ack_autoclose = 1
 
-" let g:ycm_min_num_of_chars_for_completion = 2
-" let g:ycm_min_num_identifier_candidate_chars = 2
-" let g:ycm_seed_identifiers_with_syntax = 1
-" let g:ycm_key_list_stop_completion = ['<enter>']
-" let g:ycm_filetype_whitelist = {'rust': 1}
-" let g:ycm_racerd_binary_path = 'racerd'
-" let g:complete_parameter_use_ultisnips_mapping = 1
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_key_list_stop_completion = ['<enter>']
+let g:ycm_filetype_whitelist = {'rust': 1, 'c': 1}
+let g:ycm_racerd_binary_path = 'racerd'
+let g:ycm_goto_buffer_command = 'split'
+" let g:ycm_goto_buffer_command = 'same-buffer'
+let g:ycm_semantic_triggers = get(g:, 'ycm_semantic_triggers', {})
+let g:ycm_semantic_triggers.rust = ['.', ':', 're![\w-]{2}']
+
+let g:complete_parameter_use_ultisnips_mapping = 1
+let g:UltiSnipsExpandTrigger="<C-e>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+
+let g:smartim_default = 'com.apple.keylayout.US'
+
+function! Multiple_cursors_before()
+  let g:smartim_disable = 1
+endfunction
+function! Multiple_cursors_after()
+  unlet g:smartim_disable
+endfunction
 
 packloadall
 silent! helptags ALL
@@ -84,15 +98,14 @@ nnoremap <silent> gc :let @/ = ""<CR>
 nnoremap gs :Ack!<SPACE>
 nnoremap gq :cclose<CR>
 
+nmap gd :tab YcmCompleter GoTo<CR>
+
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap tt :NERDTreeToggle<CR>
 nnoremap tf :NERDTreeFocus<CR>
 
-" inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+inoremap <silent><expr> ( complete_parameter#pre_complete("()")
 
-
-au FileType rust nmap gdd :ALEGoToDefinitionInVSplit<CR>
-au FileType rust nmap gdr <Plug>(rust-def-vertical)
 au FileType rust nnoremap gh :ALEHover<CR>
 au FileType rust nnoremap ga :ALEDetail<CR>
