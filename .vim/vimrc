@@ -74,6 +74,7 @@ let g:ycm_semantic_triggers.rust = ['.', ':', 're![\w-]{2}']
 
 let g:complete_parameter_use_ultisnips_mapping = 1
 let g:UltiSnipsExpandTrigger="<C-e>"
+let g:UltiSnipsListSnippets='<C-space>'
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
@@ -91,6 +92,7 @@ silent! helptags ALL
 
 inoremap <silent> jj <ESC>
 inoremap <silent> ;; <ESC>A;
+inoremap <silent> ,, <ESC>A,
 nnoremap <silent> ;; :update<CR>
 
 nnoremap <silent> gvt :vert term<CR>
