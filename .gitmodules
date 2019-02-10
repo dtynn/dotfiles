@@ -25,9 +25,6 @@
 [submodule ".vim/pack/plugins/start/vim-code-dark-plus"]
 	path = .vim/pack/plugins/start/vim-code-dark-plus
 	url = https://github.com/dunstontc/vim-vscode-theme.git
-[submodule ".vim/pack/plugins/start/vim-airline"]
-	path = .vim/pack/plugins/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
 [submodule ".vim/pack/plugins/start/indentLine"]
 	path = .vim/pack/plugins/start/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
