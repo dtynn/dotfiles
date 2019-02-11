@@ -83,15 +83,6 @@ let g:UltiSnipsListSnippets='<C-space>'
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
-let g:smartim_default = 'com.apple.keylayout.US'
-
-function! Multiple_cursors_before()
-  let g:smartim_disable = 1
-endfunction
-function! Multiple_cursors_after()
-  let g:smartim_disable = 0
-endfunction
-
 packloadall
 silent! helptags ALL
 
