@@ -52,3 +52,6 @@
 [submodule ".vim/pack/plugins/start/vim-go"]
 	path = .vim/pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/pack/plugins/start/vim-easymotion"]
+	path = .vim/pack/plugins/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
