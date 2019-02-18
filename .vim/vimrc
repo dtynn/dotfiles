@@ -89,8 +89,8 @@ silent! helptags ALL
 
 inoremap <silent> jj <ESC>
 inoremap <silent> ;; <ESC>A
-inoremap <silent> ;j <ESC>o
-inoremap <silent> ;k <ESC>O
+inoremap <silent> zz <ESC>o
+inoremap <silent> xx <ESC>O
 nnoremap <silent> ;; :update<CR>
 
 nnoremap <silent> gvt :vert term<CR>
