@@ -87,7 +87,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 packloadall
 silent! helptags ALL
 
-inoremap <silent> jj <ESC>
+inoremap <silent> jk <ESC>
 inoremap <silent> ;; <ESC>A
 inoremap <silent> zz <ESC>o
 inoremap <silent> xx <ESC>O
