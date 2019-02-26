@@ -29,9 +29,9 @@ set showcmd
 set lazyredraw
 set scrolloff=5
 set hlsearch
-set clipboard=unnamed
 
 " set incsearch
+let mapleader = "\<Space>"
 
 let g:rustfmt_autosave = 0
 
@@ -88,10 +88,26 @@ packloadall
 silent! helptags ALL
 
 inoremap <silent> jk <ESC>
-inoremap <silent> ;; <ESC>A
+inoremap <silent> <c-l> <ESC>A
+inoremap <silent> <c-h> <ESC>^i
 inoremap <silent> zz <ESC>o
 inoremap <silent> xx <ESC>O
-nnoremap <silent> ;; :update<CR>
+nnoremap <silent> <Leader>w :update<CR>
+nnoremap <c-h> ^
+nnoremap <c-l> $
+vnoremap <c-h> ^
+vnoremap <c-l> $
+
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 
 nnoremap <silent> gvt :vert term<CR>
 nnoremap <silent> gc :let @/ = ""<CR>
