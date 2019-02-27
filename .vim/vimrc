@@ -78,6 +78,9 @@ let g:ycm_semantic_triggers.go = ['.', 're![\w-]{2}']
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+let g:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
+inoremap <buffer><silent> ) <C-R>=AutoPairsInsert(')')<CR>
+
 let g:complete_parameter_use_ultisnips_mapping = 1
 let g:UltiSnipsExpandTrigger="<C-e>"
 let g:UltiSnipsListSnippets='<C-space>'
