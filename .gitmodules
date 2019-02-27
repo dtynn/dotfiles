@@ -16,9 +16,6 @@
 [submodule ".vim/pack/plugins/start/vim-snippets"]
 	path = .vim/pack/plugins/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule ".vim/pack/plugins/start/delimitMate"]
-	path = .vim/pack/plugins/start/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule ".vim/pack/plugins/start/ultisnips"]
 	path = .vim/pack/plugins/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
