@@ -94,6 +94,8 @@ silent! helptags ALL
 inoremap <silent> jk <ESC>
 inoremap <silent> zz <ESC>o
 inoremap <silent> xx <ESC>O
+inoremap <silent> ;; <ESC>A;<ESC>o
+inoremap <silent> ;, <ESC>A,<ESC>o
 nnoremap <silent> <Leader>w :update<CR>
 nnoremap <c-h> ^
 nnoremap <c-l> $
