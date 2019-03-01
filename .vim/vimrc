@@ -92,8 +92,6 @@ packloadall
 silent! helptags ALL
 
 inoremap <silent> jk <ESC>
-inoremap <silent> <c-l> <ESC>A
-inoremap <silent> <c-h> <ESC>^i
 inoremap <silent> zz <ESC>o
 inoremap <silent> xx <ESC>O
 nnoremap <silent> <Leader>w :update<CR>
