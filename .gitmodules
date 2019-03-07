@@ -52,3 +52,6 @@
 [submodule ".vim/pack/plugins/start/nerdcommenter"]
 	path = .vim/pack/plugins/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/pack/plugins/start/vim-visual-multi"]
+	path = .vim/pack/plugins/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
