@@ -95,7 +95,8 @@ inoremap <silent> jk <ESC>
 inoremap <silent> zz <ESC>o
 inoremap <silent> xx <ESC>O
 inoremap <silent> ;; <ESC>A
-nnoremap <silent> ;; :update<CR>
+nnoremap <silent> zz :update<CR>
+
 nnoremap <c-h> ^
 nnoremap <c-l> $
 vnoremap <c-h> ^
