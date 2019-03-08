@@ -109,6 +109,9 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
+nmap <Leader>x gt
+nmap <Leader>z gT
+
 nmap <Leader>b :vnew<CR>
 
 vnoremap <silent> y y`]
