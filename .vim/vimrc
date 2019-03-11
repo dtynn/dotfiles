@@ -130,7 +130,8 @@ nmap gd :vertical YcmCompleter GoTo<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nnoremap tt :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+nnoremap tt :NERDTreeToggle<CR>
+nnoremap tm :NERDTreeMirror<CR>
 nnoremap tf :NERDTreeFocus<CR>
 
 au FileType rust nnoremap gh :ALEHover<CR>
