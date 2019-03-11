@@ -122,7 +122,7 @@ nnoremap <silent> p p`]
 
 nnoremap <silent> gvt :vert term<CR>
 nnoremap <silent> gc :let @/ = ""<CR>
-nnoremap gs :Ack!<SPACE>
+nnoremap <Leader>s :Ack!<SPACE>
 nnoremap gq :cclose<CR>
 
 nmap gd :vertical YcmCompleter GoTo<CR>
