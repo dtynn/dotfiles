@@ -121,6 +121,12 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
+vmap <Leader>[ S[
+vmap <Leader>{ S{
+vmap <Leader>" S"
+vmap <Leader>' S'
+vmap <Leader>` S`
+
 nnoremap <silent> gvt :vert term<CR>
 nnoremap <silent> gc :let @/ = ""<CR>
 nnoremap <Leader>s :Ack!<SPACE>
