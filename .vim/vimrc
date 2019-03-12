@@ -70,7 +70,8 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_key_list_stop_completion = ['<enter>']
 let g:ycm_filetype_whitelist = {'rust': 1, 'c': 1, 'go': 1}
 let g:ycm_racerd_binary_path = 'racerd'
-let g:ycm_goto_buffer_command = 'split'
+let g:ycm_goto_buffer_command = 'split-or-existing-window'
+" let g:ycm_goto_buffer_command = 'split'
 " let g:ycm_goto_buffer_command = 'same-buffer'
 let g:ycm_semantic_triggers = get(g:, 'ycm_semantic_triggers', {})
 let g:ycm_semantic_triggers.rust = ['.', ':', 're![\w-]{2}']
@@ -89,6 +90,7 @@ let g:NERDCommentEmptyLines = 0
 let g:NERDTrimTrailingWhitespace = 1
 
 let g:go_fmt_command = "goimports"
+let g:go_def_reuse_buffer = 1
 
 packloadall
 silent! helptags ALL
@@ -121,6 +123,7 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
+vmap <Leader>( S(
 vmap <Leader>[ S[
 vmap <Leader>{ S{
 vmap <Leader>" S"
@@ -133,6 +136,7 @@ nnoremap <Leader>s :Ack!<SPACE>
 nnoremap gq :cclose<CR>
 
 nmap gd :vertical YcmCompleter GoTo<CR>
+au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
