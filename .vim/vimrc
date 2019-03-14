@@ -107,6 +107,7 @@ nnoremap <c-h> ^
 nnoremap <c-l> $
 vnoremap <c-h> ^
 vnoremap <c-l> $
+inoremap <c-l> <c-o>a
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
