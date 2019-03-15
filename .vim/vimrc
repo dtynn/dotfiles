@@ -139,6 +139,7 @@ nnoremap gq :cclose<CR>
 
 nmap gd :vertical YcmCompleter GoTo<CR>
 au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
+au FileType rust nmap <Leader>gd :tab YcmCompleter GoTo<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
