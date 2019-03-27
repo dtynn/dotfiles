@@ -30,6 +30,7 @@ set lazyredraw
 set scrolloff=5
 set hlsearch
 set foldmethod=indent
+set nofoldenable
 
 " set incsearch
 let mapleader = "\<Space>"
