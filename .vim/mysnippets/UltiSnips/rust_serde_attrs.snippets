@@ -1,0 +1,9 @@
+snippet serde_attr "#[serde($attr)]"
+#[serde(${1:attr})]$0
+endsnippet
+
+snippet serde_expr "#[serde($attr = $expr)]"
+#[serde(${1:attr} = "${2:expr}")]$0
+endsnippet
+
+# vim:ft=snippets:

@@ -31,6 +31,7 @@ set scrolloff=5
 set hlsearch
 set foldmethod=indent
 set nofoldenable
+set runtimepath+=~/.vim/mysnippets
 
 " set incsearch
 let mapleader = "\<Space>"
