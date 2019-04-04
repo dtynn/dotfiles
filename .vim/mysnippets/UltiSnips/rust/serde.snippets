@@ -1,0 +1,53 @@
+snippet serde_attr "#[serde($attr)]"
+#[serde(${1:attr})]$0
+endsnippet
+
+snippet serde_expr "#[serde($attr = $expr)]"
+#[serde(${1:attr} = "${2:expr}")]$0
+endsnippet
+
+snippet serde_rename "#[serde(rename = $expr)]"
+#[serde(rename = "${1:expr}")]$0
+endsnippet
+
+snippet serde_alias "#[serde(alias = $expr)]"
+#[serde(alias = "${1:expr}")]$0
+endsnippet
+
+snippet serde_default "#[serde(default = $expr)]"
+#[serde(default = "${1:expr}")]$0
+endsnippet
+
+snippet serde_flatten "#[serde(flatten)]"
+#[serde(flatten)]$0
+endsnippet
+
+snippet serde_skip "#[serde(skip)]"
+#[serde(skip)]$0
+endsnippet
+
+snippet serde_skip_se "#[serde(skip_serializing)]"
+#[serde(skip_serializing)]$0
+endsnippet
+
+snippet serde_skip_de "#[serde(skip_deserializing)]"
+#[serde(skip_deserializing)]$0
+endsnippet
+
+snippet serde_skip_se_if "#[serde(skip_serializing_if = $expr)]"
+#[serde(skip_serializing_if = "${1:expr}")]$0
+endsnippet
+
+snippet serde_serialize_with "#[serde(serialize_with = $expr)]"
+#[serde(serialize_with = "${1:expr}")]$0
+endsnippet
+
+snippet serde_deserialize_with "#[serde(deserialize_with = $expr)]"
+#[serde(deserialize_with = "${1:expr}")]$0
+endsnippet
+
+snippet serde_with "#[serde(with = $expr)]"
+#[serde(with = "${1:expr}")]$0
+endsnippet
+
+# vim:ft=snippets:
