@@ -111,10 +111,6 @@ nnoremap <c-h> ^
 nnoremap <c-l> $
 vnoremap <c-h> ^
 vnoremap <c-l> $
-inoremap ¬ <c-o>a
-inoremap ˙ <c-o>h
-inoremap ∆ <c-o>j
-inoremap ˚ <c-o>k
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
