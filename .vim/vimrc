@@ -83,6 +83,20 @@ let g:ycm_semantic_triggers.go = ['.', 're![\w-]{2}']
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+let g:ycm_language_server =
+  \ [
+  \   {
+  \     'name': 'rust',
+  \     'cmdline': [ 'rls' ],
+  \     'filetypes': [ 'rust' ]
+  \   },
+  \   {
+  \     'name': 'go',
+  \     'cmdline': [ 'gopls' ],
+  \     'filetypes': [ 'go' ]
+  \   }
+  \ ]
+
 let g:UltiSnipsExpandTrigger="<C-e>"
 let g:UltiSnipsListSnippets='<C-space>'
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
