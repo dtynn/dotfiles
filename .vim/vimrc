@@ -37,9 +37,10 @@ set runtimepath+=~/.vim/mysnippets
 let mapleader = "\<Space>"
 
 let g:rustfmt_autosave = 0
+" let g:syntastic_rust_checkers = []
 
-let g:ale_rust_rls_toolchain = 'stable'
-let g:ale_linters = {'rust': ['cargo']}
+" let g:ale_rust_rls_toolchain = 'stable'
+" let g:ale_linters = {'rust': ['cargo']}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 1
 let g:ale_fixers = {
