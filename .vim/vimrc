@@ -98,6 +98,11 @@ let g:ycm_language_server =
   \     'name': 'rust',
   \     'cmdline': [ 'rls' ],
   \     'filetypes': [ 'rust' ]
+  \   },
+  \   {
+  \     'name': 'go',
+  \     'cmdline': [ 'gopls' ],
+  \     'filetypes': [ 'go' ]
   \   }
   \ ]
 
@@ -177,7 +182,7 @@ au FileType rust nnoremap gh :ALEHover<CR>
 au FileType rust nnoremap ga :ALEDetail<CR>
 au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
 
-" au FileType go set omnifunc=""
+au FileType go set omnifunc=""
 
 call NERDTreeAddKeyMap({'key': 't', 'callback': 'NERDTreeMyOpenInTab', 'scope': 'FileNode', 'override': 1 })
 function NERDTreeMyOpenInTab(node)
