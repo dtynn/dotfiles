@@ -40,12 +40,16 @@ let g:rustfmt_autosave = 0
 let g:syntastic_rust_checkers = []
 
 " let g:ale_rust_rls_toolchain = 'stable'
-" let g:ale_linters = {'rust': ['cargo']}
+let g:ale_linters = {
+\   'go': ['govet'],
+\   'rust': ['cargo'],
+\}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
+\   'go': ['goimports'],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
@@ -83,6 +87,9 @@ let g:ycm_semantic_triggers.rust = ['.', ':', 're![\w-]{2}']
 let g:ycm_semantic_triggers.go = ['.', 're![\w-]{2}']
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_echo_current_diagnostic = 0
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 
 let g:ycm_language_server =
@@ -104,6 +111,7 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 0
 let g:NERDTrimTrailingWhitespace = 1
 
+let g:go_fmt_autosave = 0
 let g:go_fmt_command = "goimports"
 let g:go_def_reuse_buffer = 1
 let g:go_def_mapping_enabled = 0
