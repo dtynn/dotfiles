@@ -16,7 +16,7 @@ set shiftwidth=4
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 set cursorline
-set omnifunc=syntaxcomplete#Complete
+" set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,menuone,noselect,noinsert
 set splitbelow
 set splitright
@@ -177,8 +177,7 @@ nnoremap <Leader>s :Ack!<SPACE>
 nnoremap gq :cclose<CR>
 
 nmap gd :vertical YcmCompleter GoTo<CR>
-au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
-au FileType rust nmap <Leader>gd :tab YcmCompleter GoTo<CR>
+nmap <Leader>gd :tab YcmCompleter GoTo<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
