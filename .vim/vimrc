@@ -123,6 +123,7 @@ let g:go_def_mapping_enabled = 0
 let g:go_def_mode = 'gopls'
 let g:go_info_mode = 'gopls'
 
+
 packloadall
 silent! helptags ALL
 
@@ -162,6 +163,13 @@ vmap <Leader>{ S{
 vmap <Leader>" S"
 vmap <Leader>' S'
 vmap <Leader>` S`
+
+" CompleteParameters
+inoremap <silent><expr> * complete_parameter#pre_complete("()")
+smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 
 nnoremap <silent> gvt :vert term<CR>
 nnoremap <silent> gc :let @/ = ""<CR>
