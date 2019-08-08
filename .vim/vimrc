@@ -156,7 +156,9 @@ nmap <Leader>z gT
 nmap <Leader>b :vnew<CR>
 
 vnoremap <silent> y y`]
+sunmap y
 vnoremap <silent> p p`]
+sunmap p
 nnoremap <silent> p p`]
 
 vmap <Leader>( S(
