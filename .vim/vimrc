@@ -165,7 +165,7 @@ vmap <Leader>' S'
 vmap <Leader>` S`
 
 " CompleteParameters
-inoremap <silent><expr> * complete_parameter#pre_complete("()")
+inoremap <silent><expr> <C-f> complete_parameter#pre_complete("()")
 smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
 imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
 smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
