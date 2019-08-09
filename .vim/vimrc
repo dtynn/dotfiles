@@ -32,6 +32,8 @@ set hlsearch
 set foldmethod=indent
 set nofoldenable
 set runtimepath+=~/.vim/mysnippets
+" use .vimrc in cwd
+set exrc
 
 " set incsearch
 let mapleader = "\<Space>"
