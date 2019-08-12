@@ -127,6 +127,8 @@ let g:go_def_mapping_enabled = 0
 let g:go_def_mode = 'gopls'
 let g:go_info_mode = 'gopls'
 
+" let g:complete_parameter_log_level = 1
+
 
 packloadall
 silent! helptags ALL
