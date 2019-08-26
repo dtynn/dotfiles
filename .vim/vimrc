@@ -43,7 +43,7 @@ let g:syntastic_rust_checkers = []
 
 " let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_linters = {
-\   'go': ['govet'],
+\   'go': ['go vet', 'golint'],
 \   'rust': ['cargo'],
 \}
 let g:ale_lint_on_text_changed = 'never'
