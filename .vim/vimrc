@@ -51,7 +51,7 @@ let g:ale_lint_on_enter = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
-\   'go': ['goimports'],
+\   'go': ['gofmt'],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
