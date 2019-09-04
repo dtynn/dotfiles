@@ -1,0 +1,27 @@
+# proto service
+snippet srv "proto service" b
+// Service $1: $2
+service ${1:Name} {
+	$0
+
+}
+endsnippet
+
+# proto rpc method
+snippet rpc "rpc method in service" b
+// Method $1: $2
+rpc ${1:Method}($1Req) returns ($1Resp) {
+  $0
+};
+
+endsnippet
+
+# proto option
+snippet opt "proto option" b
+option ($1) = $2;
+endsnippet
+
+# proto field option
+snippet fopt "proto message field option" b
+[($1) = $2]
+endsnippet
