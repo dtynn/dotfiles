@@ -34,9 +34,6 @@
 [submodule ".vim/pack/plugins/start/YouCompleteMe"]
 	path = .vim/pack/plugins/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "racerd"]
-	path = racerd
-	url = https://github.com/jwilm/racerd.git
 [submodule ".vim/pack/plugins/start/lightline.vim"]
 	path = .vim/pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
