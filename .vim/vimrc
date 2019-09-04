@@ -42,13 +42,12 @@ let g:rustfmt_autosave = 0
 let g:syntastic_rust_checkers = []
 
 " let g:ale_rust_rls_toolchain = 'stable'
-let g:ale_history_log_output = 1
+" let g:ale_history_log_output = 1
 let g:ale_linters = {
 \   'go': ['go vet', 'golint'],
 \   'rust': ['cargo'],
 \   'proto': ['prototool', 'protoc-gen-lint'],
 \}
-let g:ale_c_clangformat_options = '-style=google'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 1
 let g:ale_fixers = {
@@ -202,6 +201,8 @@ au FileType rust nnoremap ga :ALEDetail<CR>
 au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
 
 au FileType go set omnifunc=""
+
+au FileType proto let g:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
 
 call NERDTreeAddKeyMap({'key': 't', 'callback': 'NERDTreeMyOpenInTab', 'scope': 'FileNode', 'override': 1 })
 function NERDTreeMyOpenInTab(node)
