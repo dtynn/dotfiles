@@ -200,9 +200,10 @@ au FileType rust nnoremap gh :ALEHover<CR>
 au FileType rust nnoremap ga :ALEDetail<CR>
 au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
 
-au FileType go set omnifunc=""
+au FileType go setlocal omnifunc=""
 
-au FileType proto let g:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
+au FileType proto let b:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
+au Filetype proto setlocal ts=2 sw=2 expandtab
 
 call NERDTreeAddKeyMap({'key': 't', 'callback': 'NERDTreeMyOpenInTab', 'scope': 'FileNode', 'override': 1 })
 function NERDTreeMyOpenInTab(node)
