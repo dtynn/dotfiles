@@ -42,16 +42,20 @@ let g:rustfmt_autosave = 0
 let g:syntastic_rust_checkers = []
 
 " let g:ale_rust_rls_toolchain = 'stable'
+let g:ale_history_log_output = 1
 let g:ale_linters = {
 \   'go': ['go vet', 'golint'],
 \   'rust': ['cargo'],
+\   'proto': ['prototool', 'protoc-gen-lint'],
 \}
+let g:ale_c_clangformat_options = '-style=google'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
 \   'go': ['gofmt'],
+\   'proto': ['clang-format'],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
