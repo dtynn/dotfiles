@@ -55,3 +55,6 @@
 [submodule ".vim/pack/plugins/start/CompleteParameter"]
 	path = .vim/pack/plugins/start/CompleteParameter
 	url = https://github.com/dtynn/CompleteParameter.vim.git
+[submodule "uber/prototool"]
+	path = uber/prototool
+	url = https://github.com/uber/prototool.git
