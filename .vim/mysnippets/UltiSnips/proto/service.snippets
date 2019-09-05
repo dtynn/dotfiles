@@ -26,6 +26,20 @@ rpc ${1:Method}( ${2:$1Req} ) returns ( ${3:$1Resp} ) {
 
 endsnippet
 
+# proto rpc request & response
+snippet req "rpc req & resp" b
+// $1Req
+message ${1:Name}Req {
+  $2
+};
+
+// $1Resp
+message $1Resp {
+
+};
+
+endsnippet
+
 # proto option
 snippet opt "proto option" b
 option ($1) = $2;
