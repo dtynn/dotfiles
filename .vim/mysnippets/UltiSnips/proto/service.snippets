@@ -40,6 +40,17 @@ message $1Resp {
 
 endsnippet
 
+# proto rpc response
+snippet inresp "inside response" b
+message Data {
+  $0
+}
+
+common.Result res = 1;
+Data data = 2;
+
+endsnippet
+
 # proto option
 snippet opt "proto option" b
 option ($1) = $2;
