@@ -35,6 +35,18 @@ message $1Resp {};
 
 endsnippet
 
+# proto rpc realted codez
+snippet rpc "all rpc method related codes" b
+// For API $1
+message ${1:Name}Req {};
+
+message $1Resp {};
+
+//
+rpc $1( $1Req ) returns ( $1Resp ) {};
+
+endsnippet
+
 # proto rpc response
 snippet inresp "inside response" b
 message Data {
