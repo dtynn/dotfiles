@@ -1,6 +1,6 @@
 # proto msg
 snippet msg "proto message" b
-// Message $1: $2
+// $2
 message ${1:Name} {
   $0
 
@@ -9,7 +9,7 @@ endsnippet
 
 # proto service
 snippet srv "proto service" b
-// Service $1: $2
+// $2
 service ${1:Name} {
   $0
 
@@ -18,7 +18,7 @@ endsnippet
 
 # proto rpc method
 snippet rpc "rpc method in service" b
-// Method $1: $4
+// $4
 rpc ${1:Method}( ${2:$1Req} ) returns ( ${3:$1Resp} ) {
   $0
 
@@ -28,15 +28,10 @@ endsnippet
 
 # proto rpc request & response
 snippet req "rpc req & resp" b
-// $1Req
-message ${1:Name}Req {
-  $2
-};
+// For API $1
+message ${1:Name}Req {};
 
-// $1Resp
-message $1Resp {
-
-};
+message $1Resp {};
 
 endsnippet
 
