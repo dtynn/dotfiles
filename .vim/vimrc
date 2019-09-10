@@ -46,6 +46,7 @@ let g:syntastic_rust_checkers = []
 let g:ale_linters = {
 \   'go': ['go vet', 'golint'],
 \   'rust': ['cargo'],
+\   'typescript': ['tslint', 'typecheck'],
 \   'proto': ['prototool', 'protoc-gen-lint'],
 \}
 let g:ale_lint_on_text_changed = 'never'
@@ -54,7 +55,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
 \   'go': ['gofmt'],
-\   'typescript': ['tslint'],
+\   'typescript': ['prettier'],
 \   'proto': ['clang-format'],
 \}
 let g:ale_fix_on_save = 1
@@ -207,6 +208,8 @@ au FileType go setlocal omnifunc=""
 
 au FileType proto let b:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
 au Filetype proto setlocal ts=2 sw=2 expandtab
+
+au Filetype typescript setlocal ts=2 sw=2 expandtab
 
 call NERDTreeAddKeyMap({'key': 't', 'callback': 'NERDTreeMyOpenInTab', 'scope': 'FileNode', 'override': 1 })
 function NERDTreeMyOpenInTab(node)
