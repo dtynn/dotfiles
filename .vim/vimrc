@@ -210,6 +210,7 @@ au FileType proto let b:ale_c_clangformat_options = '-style=google -assume-filen
 au Filetype proto setlocal ts=2 sw=2 expandtab
 
 au Filetype typescript setlocal ts=2 sw=2 expandtab
+au Filetype yaml setlocal ts=2 sw=2 expandtab
 
 call NERDTreeAddKeyMap({'key': 't', 'callback': 'NERDTreeMyOpenInTab', 'scope': 'FileNode', 'override': 1 })
 function NERDTreeMyOpenInTab(node)
