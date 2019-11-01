@@ -192,6 +192,7 @@ nnoremap <Leader>s :Ack!<SPACE>
 nnoremap gq :cclose<CR>
 
 nmap gd :vertical YcmCompleter GoTo<CR>
+nmap gr :YcmCompleter GoToReferences<CR>
 nmap <Leader>gd :tab YcmCompleter GoTo<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
