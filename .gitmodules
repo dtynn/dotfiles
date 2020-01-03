@@ -46,3 +46,6 @@
 [submodule "uber/prototool"]
 	path = uber/prototool
 	url = https://github.com/uber/prototool.git
+[submodule ".vim/pack/plugins/start/coc.nvim"]
+	path = .vim/pack/plugins/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
