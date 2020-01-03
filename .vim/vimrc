@@ -17,7 +17,7 @@ set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 set cursorline
 " set omnifunc=syntaxcomplete#Complete
-set completeopt=menu,menuone,noselect,noinsert
+set completeopt=preview,menu,menuone,noselect,noinsert
 set splitbelow
 set splitright
 set backspace=indent,eol,start
@@ -26,6 +26,7 @@ set laststatus  =2
 set display     =lastline
 set showmode
 set showcmd
+set cmdheight=2
 set lazyredraw
 set scrolloff=5
 set hlsearch
@@ -38,8 +39,8 @@ set exrc
 " set incsearch
 let mapleader = "\<Space>"
 
-let g:rustfmt_autosave = 0
-let g:syntastic_rust_checkers = []
+" let g:rustfmt_autosave = 0
+" let g:syntastic_rust_checkers = []
 
 " let g:ale_rust_rls_toolchain = 'stable'
 " let g:ale_history_log_output = 1
@@ -83,40 +84,40 @@ let g:ctrlp_prompt_mappings = {
 let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir target'
 let g:ack_autoclose = 1
 
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_min_num_identifier_candidate_chars = 2
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_key_list_stop_completion = ['<enter>']
-let g:ycm_filetype_whitelist = {'rust': 1, 'c': 1, 'go': 1, 'proto': 1, 'typescript': 1,}
-let g:ycm_racerd_binary_path = 'racerd'
-let g:ycm_goto_buffer_command = 'split-or-existing-window'
+" let g:ycm_min_num_of_chars_for_completion = 2
+" let g:ycm_min_num_identifier_candidate_chars = 2
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_key_list_stop_completion = ['<enter>']
+" let g:ycm_filetype_whitelist = {'rust': 1, 'c': 1, 'go': 1, 'proto': 1, 'typescript': 1,}
+" let g:ycm_racerd_binary_path = 'racerd'
+" let g:ycm_goto_buffer_command = 'split-or-existing-window'
 " let g:ycm_goto_buffer_command = 'split'
 " let g:ycm_goto_buffer_command = 'same-buffer'
-let g:ycm_semantic_triggers = get(g:, 'ycm_semantic_triggers', {})
-let g:ycm_semantic_triggers.rust = ['.', ':', 're![\w-]{2}']
-let g:ycm_semantic_triggers.go = ['.', 're![\w-]{2}']
-let g:ycm_semantic_triggers.proto = ['.', 're![\w-]{2}']
-let g:ycm_semantic_triggers.typescript = ['.', 're![\w-]{2}']
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_echo_current_diagnostic = 0
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_diagnostic_highlighting = 0
+" let g:ycm_semantic_triggers = get(g:, 'ycm_semantic_triggers', {})
+" let g:ycm_semantic_triggers.rust = ['.', ':', 're![\w-]{2}']
+" let g:ycm_semantic_triggers.go = ['.', 're![\w-]{2}']
+" let g:ycm_semantic_triggers.proto = ['.', 're![\w-]{2}']
+" let g:ycm_semantic_triggers.typescript = ['.', 're![\w-]{2}']
+" let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_echo_current_diagnostic = 0
+" let g:ycm_show_diagnostics_ui = 0
+" let g:ycm_enable_diagnostic_signs = 0
+" let g:ycm_enable_diagnostic_highlighting = 0
 
-let g:ycm_language_server =
-  \ [
-  \   {
-  \     'name': 'rust',
-  \     'cmdline': [ 'rls' ],
-  \     'filetypes': [ 'rust' ]
-  \   },
-  \   {
-  \     'name': 'go',
-  \     'cmdline': [ 'gopls' ],
-  \     'filetypes': [ 'go' ]
-  \   }
-  \ ]
+" let g:ycm_language_server =
+"   \ [
+"   \   {
+"   \     'name': 'rust',
+"   \     'cmdline': [ 'rls' ],
+"   \     'filetypes': [ 'rust' ]
+"   \   },
+"   \   {
+"   \     'name': 'go',
+"   \     'cmdline': [ 'gopls' ],
+"   \     'filetypes': [ 'go' ]
+"   \   }
+"   \ ]
 
 let g:UltiSnipsExpandTrigger="<C-e>"
 let g:UltiSnipsListSnippets='<C-space>'
@@ -181,20 +182,21 @@ vmap <Leader>' S'
 vmap <Leader>` S`
 
 " CompleteParameters
-inoremap <silent><expr> <C-f> complete_parameter#pre_complete("()")
-smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
-imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+" inoremap <silent><expr> <C-f> complete_parameter#pre_complete("()")
+" smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+" imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+" smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+" imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 
 nnoremap <silent> gvt :vert term<CR>
 nnoremap <silent> gc :let @/ = ""<CR>
 nnoremap <Leader>s :Ack!<SPACE>
 nnoremap gq :cclose<CR>
 
-nmap gd :vertical YcmCompleter GoTo<CR>
-nmap gr :YcmCompleter GoToReferences<CR>
-nmap <Leader>gd :tab YcmCompleter GoTo<CR>
+" nmap gd :vertical YcmCompleter GoTo<CR>
+nmap gd :call CocActionAsync('jumpDefinition', 'vsplit')<CR>
+" nmap gr <Plug>(coc-references)<CR>
+nmap <Leader>gd <Plug>(coc-definition)<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -206,7 +208,7 @@ au FileType rust nnoremap gh :ALEHover<CR>
 au FileType rust nnoremap ga :ALEDetail<CR>
 au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
 
-au FileType go setlocal omnifunc=""
+" au FileType go setlocal omnifunc=""
 
 au FileType proto let b:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
 au Filetype proto setlocal ts=2 sw=2 expandtab
@@ -218,3 +220,11 @@ call NERDTreeAddKeyMap({'key': 't', 'callback': 'NERDTreeMyOpenInTab', 'scope': 
 function NERDTreeMyOpenInTab(node)
     call a:node.open({'reuse': "all", 'where': 't'})
 endfunction
+
+inoremap <expr> <C-f> pumvisible() ? "\<C-y>" : "\<CR>"
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"

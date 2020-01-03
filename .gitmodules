@@ -28,9 +28,6 @@
 [submodule ".vim/pack/plugins/start/ack.vim"]
 	path = .vim/pack/plugins/start/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule ".vim/pack/plugins/start/YouCompleteMe"]
-	path = .vim/pack/plugins/start/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule ".vim/pack/plugins/start/lightline.vim"]
 	path = .vim/pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
@@ -46,9 +43,6 @@
 [submodule ".vim/pack/plugins/start/vim-visual-multi"]
 	path = .vim/pack/plugins/start/vim-visual-multi
 	url = https://github.com/mg979/vim-visual-multi.git
-[submodule ".vim/pack/plugins/start/CompleteParameter"]
-	path = .vim/pack/plugins/start/CompleteParameter
-	url = https://github.com/dtynn/CompleteParameter.vim.git
 [submodule "uber/prototool"]
 	path = uber/prototool
 	url = https://github.com/uber/prototool.git
