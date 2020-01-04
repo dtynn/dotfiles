@@ -4,9 +4,9 @@
       "command": "gopls",
       "rootPatterns": ["go.mod"],
       "filetypes": ["go"],
-	  "initializationOptions": {
+      "initializationOptions": {
         "usePlaceholders": true
-	  }
+      }
     }
   },
   // "suggest.triggerAfterInsertEnter": true,
