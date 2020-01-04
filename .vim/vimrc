@@ -129,12 +129,21 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 0
 let g:NERDTrimTrailingWhitespace = 1
 
-let g:go_fmt_autosave = 0
-let g:go_fmt_command = "goimports"
-let g:go_def_reuse_buffer = 1
-let g:go_def_mapping_enabled = 0
-let g:go_def_mode = 'gopls'
-let g:go_info_mode = 'gopls'
+" let g:go_fmt_autosave = 0
+" let g:go_fmt_command = "goimports"
+" let g:go_def_reuse_buffer = 1
+" let g:go_def_mapping_enabled = 0
+" let g:go_def_mode = 'gopls'
+" let g:go_info_mode = 'gopls'
+
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ }
+
+let g:VM_theme            = 'purplegray'
+let g:VM_maps = {}
+let g:VM_maps["Add Cursor Down"]             = '<Leader>j'
+let g:VM_maps["Add Cursor Up"]               = '<Leader>k'
 
 " let g:complete_parameter_log_level = 1
 
@@ -228,6 +237,3 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-let g:VM_maps["Add Cursor Down"]             = '<Leader>j'
-let g:VM_maps["Add Cursor Up"]               = '<Leader>k'
