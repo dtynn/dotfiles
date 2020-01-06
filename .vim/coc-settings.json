@@ -9,7 +9,7 @@
       }
     }
   },
-  "suggest.triggerAfterInsertEnter": true,
+  // "suggest.triggerAfterInsertEnter": true,
   // "suggest.noselect": false,
   "useCodeSnippetsOnFunctionSuggest": true,
   "signature.target": "echo",
