@@ -205,7 +205,7 @@ nnoremap gq :cclose<CR>
 " nmap gd :vertical YcmCompleter GoTo<CR>
 nmap gd :call CocActionAsync('jumpDefinition', 'vsplit')<CR>
 nmap gr <Plug>(coc-references)<CR>
-nmap <Leader>gd :call CocActionAsync('jumpDefinition', 'tabe')<CR>
+nmap <Leader>gd :call CocActionAsync('jumpDefinition', 'tab drop')<CR>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
