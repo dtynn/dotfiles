@@ -9,6 +9,7 @@
       }
     }
   },
+  "rust-analyzer.serverPath": "rust-analyzer",
   // "suggest.triggerAfterInsertEnter": true,
   // "suggest.noselect": false,
   "useCodeSnippetsOnFunctionSuggest": true,

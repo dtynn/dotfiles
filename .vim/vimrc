@@ -6,6 +6,7 @@ syntax on
 
 colorscheme dark_plus
 
+set splitright
 set autoindent             " Indent according to previous line.
 set autoread
 set noswapfile
