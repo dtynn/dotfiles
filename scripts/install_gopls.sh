@@ -1,2 +1,2 @@
 go env -w GOPROXY="https://goproxy.cn,direct"
-go get -u -v golang.org/x/tools/gopls
+GO111MODULE="on" go get -v golang.org/x/tools/gopls
