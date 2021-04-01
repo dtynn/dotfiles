@@ -1,4 +1,4 @@
-# coc-rls
+coc-rls
 coc-snippets
 coc-ultisnips
-coc-rust-analyzer
+// coc-rust-analyzer
