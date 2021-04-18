@@ -12,7 +12,7 @@
   "go.goplsOptions": {
 	"usePlaceholders": true
   },
-  "rust-analyzer.serverPath": "rust-analyzer",
+//  "rust-analyzer.serverPath": "rust-analyzer",
   // "suggest.triggerAfterInsertEnter": true,
   // "suggest.noselect": false,
   "useCodeSnippetsOnFunctionSuggest": true,
