@@ -129,6 +129,7 @@ let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 0
 let g:NERDTrimTrailingWhitespace = 1
+let NERDTreeShowHidden=1
 
 " let g:go_fmt_autosave = 0
 " let g:go_fmt_command = "goimports"
