@@ -192,6 +192,9 @@ vmap <Leader>" S"
 vmap <Leader>' S'
 vmap <Leader>` S`
 
+vnoremap <Leader>y :OSCYank<CR>
+tnoremap <C-[> <C-\><C-n>
+
 " CompleteParameters
 " inoremap <silent><expr> <C-f> complete_parameter#pre_complete("()")
 " smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
