@@ -49,3 +49,6 @@
 [submodule ".vim/pack/plugins/start/coc.nvim"]
 	path = .vim/pack/plugins/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
+[submodule ".vim/pack/plugins/start/vim-oscyank"]
+	path = .vim/pack/plugins/start/vim-oscyank
+	url = https://github.com/ojroques/vim-oscyank.git
