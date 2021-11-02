@@ -1,1 +1,1 @@
-GO111MODULE="on" go get -u -v golang.org/x/lint/golint
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.42.1

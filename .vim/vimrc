@@ -46,7 +46,7 @@ let mapleader = "\<Space>"
 " let g:ale_rust_rls_toolchain = 'stable'
 " let g:ale_history_log_output = 1
 let g:ale_linters = {
-\   'go': ['gobuild', 'go vet', 'golint'],
+\   'go': ['gobuild', 'golangci-lint'],
 \   'rust': ['cargo'],
 \   'typescript': ['tslint', 'typecheck'],
 \   'proto': ['prototool', 'protoc-gen-lint'],
@@ -64,6 +64,8 @@ let g:ale_rust_rustfmt_options = '--edition 2018'
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
 let g:ale_rust_cargo_default_feature_behavior = 'all'
+let g:ale_go_golangci_lint_package = 1
+let g:ale_go_golangci_lint_options = '--max-issues-per-linter 20'
 
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:NERDTreeChDirMode = 2
