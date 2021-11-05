@@ -219,6 +219,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap tt :NERDTreeToggle<CR>
 nnoremap tm :NERDTreeMirror<CR>
 nnoremap tf :NERDTreeFocus<CR>
+nnoremap tr :NERDTreeFind<CR>
 
 au FileType rust nnoremap gh :ALEHover<CR>
 au FileType rust nnoremap ga :ALEDetail<CR>
