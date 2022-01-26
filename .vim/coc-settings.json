@@ -1,20 +1,8 @@
 {
-//  "languageserver": {
-//    "golang": {
-//      "command": "gopls",
-//      "rootPatterns": ["go.mod"],
-//      "filetypes": ["go"],
-//      "initializationOptions": {
-//        "usePlaceholders": true
-//      }
-//    }
-//  },
   "go.goplsOptions": {
 	"usePlaceholders": true
   },
-//  "rust-analyzer.serverPath": "rust-analyzer",
-  // "suggest.triggerAfterInsertEnter": true,
-  // "suggest.noselect": false,
+  "rust-analyzer.server.path": "/usr/local/bin/rust-analyzer",
   "useCodeSnippetsOnFunctionSuggest": true,
   "signature.target": "echo",
   "diagnostic.enable": false
