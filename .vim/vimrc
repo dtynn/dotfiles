@@ -195,6 +195,7 @@ vmap <Leader>{ S{
 vmap <Leader>" S"
 vmap <Leader>' S'
 vmap <Leader>` S`
+vmap <Leader>< Sa
 
 vnoremap <Leader>y :OSCYank<CR>
 
