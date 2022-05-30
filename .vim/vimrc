@@ -61,7 +61,6 @@ let g:ale_fixers = {
 \   'typescript': ['prettier'],
 \   'proto': ['clang-format'],
 \}
-let g:ale_rust_rustfmt_options = '--edition 2018'
 let g:ale_fix_on_save = 1
 let g:ale_close_preview_on_insert = 1
 let g:ale_rust_cargo_check_tests = 1
