@@ -52,3 +52,6 @@
 [submodule ".vim/pack/plugins/start/vim-oscyank"]
 	path = .vim/pack/plugins/start/vim-oscyank
 	url = https://github.com/ojroques/vim-oscyank.git
+[submodule ".vim/pack/typescript/start/typescript-vim"]
+	path = .vim/pack/typescript/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
