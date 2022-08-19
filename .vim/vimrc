@@ -241,8 +241,8 @@ function NERDTreeMyOpenInTab(node)
     call a:node.open({'reuse': "all", 'where': 't'})
 endfunction
 
-let g:coc_snippet_next = ''
-let g:coc_snippet_prev = ''
+" let g:coc_snippet_next = '<tab>'
+" let g:coc_snippet_prev = ''
 
 function! s:check_back_space() abort
 let col = col('.') - 1
@@ -264,8 +264,9 @@ endfunction
 
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-inoremap <silent><expr> <C-f> coc#pum#visible() ? coc#_select_confirm()
-            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr> <C-f> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
+" inoremap <silent><expr> <C-f> coc#pum#visible() ? coc#_select_confirm()
+"             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " inoremap <expr> <C-f> pumvisible() ? "\<C-y>" : "\<CR>"
 " " imap <C-j> <Nop>
