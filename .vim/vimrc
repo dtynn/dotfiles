@@ -124,10 +124,10 @@ let g:ack_autoclose = 1
 "   \   }
 "   \ ]
 
-let g:UltiSnipsExpandTrigger="<C-e>"
-let g:UltiSnipsListSnippets='<C-space>'
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+" let g:UltiSnipsExpandTrigger="<C-e>"
+" let g:UltiSnipsListSnippets='<C-space>'
+" let g:UltiSnipsJumpForwardTrigger="<C-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
@@ -224,9 +224,9 @@ nnoremap tm :NERDTreeMirror<CR>
 nnoremap tf :NERDTreeFocus<CR>
 nnoremap tr :NERDTreeFind<CR>
 
-au FileType rust nnoremap gh :ALEHover<CR>
-au FileType rust nnoremap ga :ALEDetail<CR>
-au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
+" au FileType rust nnoremap gh :ALEHover<CR>
+" au FileType rust nnoremap ga :ALEDetail<CR>
+" au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
 
 " au FileType go setlocal omnifunc=""
 
@@ -241,18 +241,32 @@ function NERDTreeMyOpenInTab(node)
     call a:node.open({'reuse': "all", 'where': 't'})
 endfunction
 
-inoremap <expr> <C-f> pumvisible() ? "\<C-y>" : "\<CR>"
-" imap <C-j> <Nop>
+" inoremap <expr> <C-f> pumvisible() ? "\<C-y>" : "\<CR>"
+" " imap <C-j> <Nop>
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Insert <tab> when previous text is space, refresh completion if not.
+inoremap <silent><expr> <TAB>
+    \ coc#pum#visible() ? coc#pum#next(1):
+    \ <SID>check_back_space() ? "\<Tab>" :
+    \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+inoremap <expr> <C-f> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
