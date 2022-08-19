@@ -34,7 +34,7 @@ set scrolloff=5
 set hlsearch
 set foldmethod=indent
 set nofoldenable
-" set runtimepath+=~/.vim/mysnippets
+set runtimepath+=~/.vim/mysnippets
 " use .vimrc in cwd
 set exrc
 
@@ -224,10 +224,9 @@ nnoremap tm :NERDTreeMirror<CR>
 nnoremap tf :NERDTreeFocus<CR>
 nnoremap tr :NERDTreeFind<CR>
 
-au FileType rust nnoremap gh :ALEHover<CR>
-au FileType rust nnoremap ga :ALEDetail<CR>
-au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
-
+" au FileType rust nnoremap gh :ALEHover<CR>
+" au FileType rust nnoremap ga :ALEDetail<CR>
+" au FileType rust nnoremap <Leader>al O<ESC>dd:update<CR>
 " au FileType go setlocal omnifunc=""
 
 au FileType proto let b:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
