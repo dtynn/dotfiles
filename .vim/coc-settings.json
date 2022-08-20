@@ -10,5 +10,5 @@
   "useCodeSnippetsOnFunctionSuggest": true,
   "signature.target": "echo",
   "diagnostic.enable": false,
-  "suggest.noselect": false
+  "suggest.noselect": true
 }
