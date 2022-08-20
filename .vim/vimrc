@@ -230,6 +230,8 @@ nnoremap tr :NERDTreeFind<CR>
 
 " au FileType go setlocal omnifunc=""
 
+au FileType scss setl iskeyword+=@-@
+
 au FileType proto let b:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
 au Filetype proto setlocal ts=2 sw=2 expandtab
 
