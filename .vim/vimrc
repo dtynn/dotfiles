@@ -47,13 +47,13 @@ let mapleader = "\<Space>"
 " let g:ale_rust_rls_toolchain = 'stable'
 " let g:ale_history_log_output = 1
 let g:ale_linters = {
-\   'go': ['gobuild', 'golangci-lint'],
-\   'rust': ['cargo'],
-\   'typescript': ['tslint', 'typecheck'],
-\   'proto': ['prototool', 'protoc-gen-lint'],
+\   'go': [],
+\   'rust': [],
+\   'typescript': [],
+\   'proto': [],
 \}
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 1
+let g:ale_lint_on_enter = 0
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
@@ -62,12 +62,12 @@ let g:ale_fixers = {
 \   'proto': ['clang-format'],
 \}
 let g:ale_fix_on_save = 1
-let g:ale_close_preview_on_insert = 1
-let g:ale_rust_cargo_check_tests = 1
-let g:ale_rust_cargo_use_clippy = 1
-let g:ale_rust_cargo_default_feature_behavior = 'all'
-let g:ale_go_golangci_lint_package = 1
-let g:ale_go_golangci_lint_options = '--max-issues-per-linter 20'
+" let g:ale_close_preview_on_insert = 1
+" let g:ale_rust_cargo_check_tests = 1
+" let g:ale_rust_cargo_use_clippy = 1
+" let g:ale_rust_cargo_default_feature_behavior = 'all'
+" let g:ale_go_golangci_lint_package = 1
+" let g:ale_go_golangci_lint_options = '--max-issues-per-linter 20'
 
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:NERDTreeChDirMode = 2
@@ -157,6 +157,9 @@ let g:VM_maps["Add Cursor Up"]               = '<Leader>k'
 packloadall
 silent! helptags ALL
 
+nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
+
 inoremap <silent> jk <ESC>
 inoremap <silent> zz <ESC>o
 inoremap <silent> xx <ESC>O
@@ -217,8 +220,8 @@ nmap gr <Plug>(coc-references)
 nmap gi <Plug>(coc-implementation)
 nmap <Leader>gd :call CocActionAsync('jumpDefinition', 'tab drop')<CR>
 
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap tt :NERDTreeToggle<CR>
 nnoremap tm :NERDTreeMirror<CR>
 nnoremap tf :NERDTreeFocus<CR>
@@ -232,7 +235,6 @@ nnoremap tr :NERDTreeFind<CR>
 
 au FileType scss setl iskeyword+=@-@
 
-au FileType proto let b:ale_c_clangformat_options = '-style=google -assume-filename=temp.proto'
 au Filetype proto setlocal ts=2 sw=2 expandtab
 
 au Filetype typescript setlocal ts=2 sw=2 expandtab
