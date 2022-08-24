@@ -13,5 +13,14 @@
   "signature.target": "echo",
   "diagnostic.enable": true,
   "diagnostic.enableSign": true,
-  "suggest.noselect": true
+  "suggest.noselect": true,
+  "languageserver": {
+    "golangci-lint-languageserver": {
+      "command": "golangci-lint-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "command": ["golangci-lint", "run", "--out-format", "json"]
+      }
+    }
+  }
 }
