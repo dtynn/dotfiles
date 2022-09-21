@@ -52,3 +52,6 @@
 [submodule ".vim/pack/typescript/start/typescript-vim"]
 	path = .vim/pack/typescript/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule ".vim/pack/plugins/start/markdown-preview.nvim"]
+	path = .vim/pack/plugins/start/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git
