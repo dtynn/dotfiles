@@ -55,3 +55,4 @@
 [submodule ".vim/pack/plugins/start/markdown-preview.nvim"]
 	path = .vim/pack/plugins/start/markdown-preview.nvim
 	url = https://github.com/iamcco/markdown-preview.nvim.git
+    ignore = dirty
