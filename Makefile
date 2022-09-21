@@ -5,3 +5,6 @@ compile-ycm:
 
 link-vim:
 	ln -s $(PWD)/.vim ~/.vim
+
+submodule:
+	git submodule update --init --recursive
