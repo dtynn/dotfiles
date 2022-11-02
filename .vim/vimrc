@@ -166,7 +166,7 @@ inoremap <silent> xx <ESC>O
 inoremap <silent> ;; <ESC>A
 inoremap <silent> ;] <ESC>]}a
 inoremap <silent> ;) <ESC>2])a
-nnoremap <silent> zz :update<CR>
+nnoremap <silent> zz :w<CR> :e<CR>
 
 nnoremap <c-h> ^
 nnoremap <c-l> $
