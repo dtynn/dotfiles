@@ -2,10 +2,15 @@
   "go.goplsOptions": {
 	"usePlaceholders": true
   },
+  "workspace.ignoredFolders": [
+    "$HOME",
+    "$HOME/.cargo/**",
+    "$HOME/.rustup/**"
+  ],
   "rust-analyzer.checkOnSave.enable": true,
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.server.path": "/usr/local/bin/rust-analyzer",
-  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.cargo.allFeatures": false,
   "rust-analyzer.cargo.runBuildScripts": true,
   "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.diagnostics.enable": true,
