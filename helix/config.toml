@@ -1,0 +1,42 @@
+theme = "dark_plus"
+
+[editor]
+mouse = false
+true-color = true
+bufferline = "multiple"
+auto-info = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+
+[editor.search]
+smart-case = false
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[keys.insert.j]
+k = "normal_mode"
+
+[keys.normal.z]
+z = ":write"
+
+[keys.normal.g]
+d = ["vsplit", "goto_definition"]
+
+[keys.normal.s]
+s = "surround_add"
+d = "surround_delete"
+r = "surround_replace"
+
+[keys.normal.space]
+q = [":bc", "wclose"]
