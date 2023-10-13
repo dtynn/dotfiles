@@ -220,6 +220,7 @@ nmap gr <Plug>(coc-references)
 nmap gi <Plug>(coc-implementation)
 nmap <Leader>gd :call CocActionAsync('jumpDefinition', 'tab drop')<CR>
 nmap <Leader>rn <Plug>(coc-rename)
+nmap <Leader>rf <Plug>(coc-refactor)
 
 if has('nvim-0.4.0') || has('patch-8.2.0750')
   nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
