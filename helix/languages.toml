@@ -1,3 +1,12 @@
+# snippets see: https://github.com/rafamadriz/friendly-snippets
+[language-server.scls]
+command = "simple-completion-language-server"
+config = { max_completion_items = 20, snippets_first = true }
+
 [[language]]
 name = "go"
 config = { "ui.completion.usePlaceholders" = true }
+
+[[language]]
+name = "rust"
+language-servers = [ "scls", "rust-analyzer" ]
