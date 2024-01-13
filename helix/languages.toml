@@ -3,9 +3,13 @@
 command = "simple-completion-language-server"
 config = { max_completion_items = 20, snippets_first = true }
 
+[language-server.gopls]
+command = "gopls"
+config = { "ui.completion.usePlaceholders" = true }
+
 [[language]]
 name = "go"
-config = { "ui.completion.usePlaceholders" = true }
+language-servers = [ "gopls" ]
 
 [[language]]
 name = "rust"
