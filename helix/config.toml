@@ -24,11 +24,22 @@ skip-levels = 1
 [editor.gutters.line-numbers]
 min-width = 1
 
-[keys.insert.j]
-k = "normal_mode"
+# INSERT MODE
+[keys.insert]
+z = { z = ["normal_mode", "open_below"] }
+x = { x = ["normal_mode", "open_above"] }
+# ";" = { ";" = ["normal_mode", "insert_at_line_end"] }
+C-l = ["normal_mode", "move_char_right", "insert_mode"]
+C-h = ["normal_mode", "move_char_left", "insert_mode"]
+j = { k = "normal_mode" }
 
-[keys.normal.z]
-z = ":write"
+# NORMAL MODE
+[keys.normal]
+C-j = "goto_next_diag"
+C-k = "goto_prev_diag"
+C-h = "goto_first_nonwhitespace"
+C-l = "goto_line_end"
+z = { z = ":write" }
 
 [keys.normal.g]
 d = ["vsplit", "goto_definition"]
