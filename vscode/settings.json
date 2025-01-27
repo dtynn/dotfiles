@@ -1,0 +1,209 @@
+{
+    "zig.path": "/home/dtynn/zig/zig",
+    "zig.initialSetupDone": true,
+    "workbench.startupEditor": "none",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    // vim settings
+    "vim.easymotion": false,
+    "vim.incsearch": false,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.visualstar": true,
+    "vim.surround": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-p>": false,
+    },
+    "vim.insertModeKeyBindings": [],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "k"],
+            "after": ["<ESC>"],
+            "silent": true,
+        },
+        {
+            "before": ["z", "z"],
+            "after": ["<ESC>", "o"],
+            "silent": true,
+        },
+        {
+            "before": ["x", "x"],
+            "after": ["<ESC>", "O"],
+            "silent": true,
+        },
+        {
+            "before": [";", ";"],
+            "after": ["<ESC>", "A"],
+            "silent": true,
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": [
+                "cursorRight",
+            ],
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<C-j>"],
+            "commands": [
+                "editor.action.marker.prev",
+            ],
+            "silent": true,
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": [
+                "editor.action.marker.next",
+            ],
+            "silent": true,
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": [
+                "editor.action.clipboardPasteAction",
+            ],
+        },
+        {
+            "before": ["<leader>", "z"],
+            "commands": [
+                "workbench.action.previousEditor",
+            ],
+        },
+        {
+            "before": ["<leader>", "x"],
+            "commands": [
+                "workbench.action.nextEditor",
+            ],
+        },
+        {
+            "before": ["g", "d"],
+            "commands": [
+                "editor.action.revealDefinition",
+            ],
+        },
+        {
+            "before": ["g", "r"],
+            "commands": [
+                "references-view.findReferences",
+            ],
+        },
+        {
+            "before": ["g", "i"],
+            "commands": [
+                "editor.action.goToImplementation",
+            ],
+        },
+        {
+            "before": ["<leader>", "g", "d"],
+            "commands": [
+                "editor.action.peekDefinition",
+            ],
+        },
+        {
+            "before": ["<leader>", "r", "n"],
+            "commands": [
+                "editor.action.rename",
+            ],
+        },
+        {
+            "before": ["<leader>", "r", "f"],
+            "commands": [
+                "editor.action.refactor",
+            ],
+        },
+        {
+            "before": ["t", "t"],
+            "commands": [
+                "workbench.view.explorer",
+            ],
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["z", "z"],
+            "commands": [
+                "workbench.action.files.save",
+            ],
+            "silent": true,
+        },
+        {
+            "before": ["<C-h>"],
+            "after": ["^"],
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["$"],
+        },
+        {
+            "before": ["p"],
+            "after": ["p", "`", "]"],
+            "silent": true,
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "commands": [
+                "editor.action.indentLines",
+            ],
+        },
+        {
+            "before": ["<"],
+            "commands": [
+                "editor.action.outdentLines",
+            ],
+        },
+        {
+            "before": ["<leader>", "y"],
+            "commands": [
+                "editor.action.clipboardCopyAction",
+            ],
+        },
+        {
+            "before": ["<leader>", "("],
+            "after": ["S", "("],
+        },
+        {
+            "before": ["<leader>", "["],
+            "after": ["S", "["],
+        },
+        {
+            "before": ["<leader>", "{"],
+            "after": ["S", "{"],
+        },
+        {
+            "before": ["<leader>", "'"],
+            "after": ["S", "'"],
+        },
+        {
+            "before": ["<leader>", "<"],
+            "after": ["S", "a"],
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-h>"],
+            "after": ["^"],
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["$"],
+        },
+        {
+            "before": ["y"],
+            "after": ["y", "`", "]"],
+            "silent": true,
+        },
+        {
+            "before": ["p"],
+            "after": ["p", "`", "]"],
+            "silent": true,
+        },
+    ],
+}
