@@ -1,4 +1,5 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
   "go.goplsOptions": {
 	"usePlaceholders": true
   },
