@@ -38,6 +38,9 @@ set runtimepath+=~/.vim/mysnippets
 " use .vimrc in cwd
 set exrc
 
+let g:coc_global_extensions = ['coc-tsserver', 'coc-rust-analyzer', 'coc-go']
+let g:coc_disable_startup_warning = 1
+
 " set incsearch
 let mapleader = "\<Space>"
 
